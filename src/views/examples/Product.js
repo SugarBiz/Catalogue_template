@@ -1,24 +1,9 @@
-/*!
 
-=========================================================
-* BLK Design System React - v1.2.1
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/blk-design-system-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/blk-design-system-react/blob/main/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
 import classnames from "classnames";
 // javascript plugin used to create scrollbars on windows
 import PerfectScrollbar from "perfect-scrollbar";
+import { useState } from 'react';
 // reactstrap components
 import {
   Button,
@@ -45,6 +30,7 @@ import {
 
 // core components
 import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
+import IndexNavbar from "components/Navbars/IndexNavbar.js";
 import Footer from "components/Footer/Footer.js";
 
 const carouselItems = [
@@ -67,7 +53,7 @@ const carouselItems = [
 
 let ps = null;
 
-export default function ProfilePage() {
+export default function ProductPage() {
   const [tabs, setTabs] = React.useState(1);
   React.useEffect(() => {
     if (navigator.platform.indexOf("Win") > -1) {
@@ -89,9 +75,21 @@ export default function ProfilePage() {
       document.body.classList.toggle("profile-page");
     };
   }, []);
+  const [inputFields, setInputFields] = useState([
+    { name: '', email: '', phone: '', company: '', message: '' }
+  ])
+  const ContactFormSubmit = (e) => {
+    e.preventDefault();
+    console.log(inputFields)
+  }
+  const handleFormChange = (index, event) => {
+    let data = [...inputFields];
+    data[index][event.target.name] = event.target.value;
+    setInputFields(data);
+ }
   return (
     <>
-      <ExamplesNavbar />
+      <IndexNavbar />
       <div className="wrapper">
         <div className="page-header">
           <img
@@ -107,13 +105,10 @@ export default function ProfilePage() {
           <Container className="align-items-center">
             <Row>
               <Col lg="6" md="6">
-                <h1 className="profile-title text-left">Mike Scheinder</h1>
+                <h1 className="profile-title text-left">Product Page</h1>
                 <h5 className="text-on-back">01</h5>
                 <p className="profile-description">
-                  Offices parties lasting outward nothing age few resolve.
-                  Impression to discretion understood to we interested he
-                  excellence. Him remarkably use projection collecting. Going
-                  about eat forty world has round miles.
+                  Project content
                 </p>
                 <div className="btn-wrapper profile pt-3">
                   <Button
@@ -352,7 +347,7 @@ export default function ProfilePage() {
                     <h5 className="text-on-back">03</h5>
                   </CardHeader>
                   <CardBody>
-                    <Form>
+                    {/* <Form>
                       <Row>
                         <Col md="6">
                           <FormGroup>
@@ -405,7 +400,69 @@ export default function ProfilePage() {
                       >
                         Can't wait for your message
                       </UncontrolledTooltip>
-                    </Form>
+                    </Form> */}
+                    <form onSubmit={ContactFormSubmit}>
+        {inputFields.map((input, index) => {
+          return (
+            <div key={index}>
+              <Row>
+                        <Col md="6">
+                          <FormGroup>
+                            <label>Your Name</label>
+                            <Input placeholder="Mike" name='name' onChange={event => handleFormChange(index, event)} value={input.name} type="text" />
+                          </FormGroup>
+                        </Col>
+                        <Col md="6">
+                          <FormGroup>
+                            <label>Email address</label>
+                            <Input placeholder="mike@email.com" name='email' onChange={event => handleFormChange(index, event)} value={input.email} type="email" />
+                          </FormGroup>
+                        </Col>
+                      </Row>
+                      <Row>
+                        <Col md="6">
+                          <FormGroup>
+                            <label>Phone</label>
+                            <Input placeholder="+12 1234567890" name='phone' onChange={event => handleFormChange(index, event)} value={input.phone} type="text" />
+                          </FormGroup>
+                        </Col>
+                        <Col md="6">
+                          <FormGroup>
+                            <label>Company</label>
+                            <Input placeholder="My Work Place" name='company' onChange={event => handleFormChange(index, event)} value={input.company} type="email" />
+                          </FormGroup>
+                        </Col>
+                      </Row>
+                      <Row>
+                        <Col md="12">
+                          <FormGroup>
+                            <label>Message</label>
+                            <Input placeholder="I work as a Procurement head and would like to colab" value={input.message} type="text" />
+                          </FormGroup>
+                        </Col>
+                      </Row>
+                      <Button
+                        className="btn-round float-right"
+                        color="primary"
+                        data-placement="right"
+                        id="tooltip341148792"
+                        type="button"
+                        onClick={ContactFormSubmit}
+                      >
+                        Send text
+                      </Button>
+                      
+                      <UncontrolledTooltip
+                        delay={0}
+                        placement="right"
+                        target="tooltip341148792"
+                      >
+                        Can't wait for your message
+                      </UncontrolledTooltip>
+            </div>
+          )
+        })}
+      </form>
                   </CardBody>
                 </Card>
               </Col>
@@ -417,9 +474,7 @@ export default function ProfilePage() {
                   <div className="description">
                     <h4 className="info-title">Find us at the office</h4>
                     <p>
-                      Bld Mihail Kogalniceanu, nr. 8, <br />
-                      7652 Bucharest, <br />
-                      Romania
+                    Peiraios, 30, 1st Floor, <br />Flat/Office 1 Strovolos,<br /> 2023, Nicosia,<br /> Cyprus
                     </p>
                   </div>
                 </div>
@@ -430,8 +485,8 @@ export default function ProfilePage() {
                   <div className="description">
                     <h4 className="info-title">Give us a ring</h4>
                     <p>
-                      Michael Jordan <br />
-                      +40 762 321 762 <br />
+                      Skytech Admin <br />
+                      +260 123 456 7890<br />
                       Mon - Fri, 8:00-22:00
                     </p>
                   </div>

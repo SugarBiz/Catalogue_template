@@ -1,9 +1,9 @@
 {
   "name": "blk-design-system-react",
   "version": "1.2.1",
-  "description": "React version of BLK Design System by Creative Tim",
+  "description": "SKY TechOPS",
   "main": "index.js",
-  "author": "Creative Tim",
+  "author": "SKY",
   "license": "MIT",
   "repository": {
     "type": "git",
