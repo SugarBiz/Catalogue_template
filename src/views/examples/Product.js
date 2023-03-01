@@ -105,7 +105,7 @@ export default function ProductPage() {
           <Container className="align-items-center">
             <Row>
               <Col lg="6" md="6">
-                <h1 className="profile-title text-left">Product Page</h1>
+                <h1 className="profile-title text-left">Player Account Manager</h1>
                 <h5 className="text-on-back">01</h5>
                 <p className="profile-description">
                   Project content
@@ -306,14 +306,17 @@ export default function ProductPage() {
                 </Row>
               </Col>
               <Col md="5">
-                <h1 className="profile-title text-left">Projects</h1>
+                <h1 className="profile-title text-left">Exchange</h1>
                 <h5 className="text-on-back">02</h5>
                 <p className="profile-description text-left">
-                  An artist of considerable range, Ryan — the name taken by
-                  Melbourne-raised, Brooklyn-based Nick Murphy — writes,
-                  performs and records all of his own music, giving it a warm,
-                  intimate feel with a solid groove structure. An artist of
-                  considerable range.
+                  Some jargon about the Exchange.
+                  Some jargon about the Exchange.
+                  Some jargon about the Exchange.<br/>
+                  Some jargon about the Exchange.
+                  Some jargon about the Exchange.
+                  Some jargon about the Exchange.<br/>
+                  Some jargon about the Exchange.
+                  Some jargon about the Exchange.
                 </p>
                 <div className="btn-wrapper pt-3">
                   <Button
@@ -337,164 +340,50 @@ export default function ProductPage() {
             </Row>
           </Container>
         </div>
-        <section className="section">
+        <div className="section">
           <Container>
-            <Row>
-              <Col md="6">
-                <Card className="card-plain">
-                  <CardHeader>
-                    <h1 className="profile-title text-left">Contact</h1>
-                    <h5 className="text-on-back">03</h5>
-                  </CardHeader>
-                  <CardBody>
-                    {/* <Form>
-                      <Row>
-                        <Col md="6">
-                          <FormGroup>
-                            <label>Your Name</label>
-                            <Input defaultValue="Mike" type="text" />
-                          </FormGroup>
-                        </Col>
-                        <Col md="6">
-                          <FormGroup>
-                            <label>Email address</label>
-                            <Input placeholder="mike@email.com" type="email" />
-                          </FormGroup>
-                        </Col>
-                      </Row>
-                      <Row>
-                        <Col md="6">
-                          <FormGroup>
-                            <label>Phone</label>
-                            <Input defaultValue="001-12321345" type="text" />
-                          </FormGroup>
-                        </Col>
-                        <Col md="6">
-                          <FormGroup>
-                            <label>Company</label>
-                            <Input defaultValue="CreativeTim" type="text" />
-                          </FormGroup>
-                        </Col>
-                      </Row>
-                      <Row>
-                        <Col md="12">
-                          <FormGroup>
-                            <label>Message</label>
-                            <Input placeholder="Hello there!" type="text" />
-                          </FormGroup>
-                        </Col>
-                      </Row>
-                      <Button
-                        className="btn-round float-right"
-                        color="primary"
-                        data-placement="right"
-                        id="tooltip341148792"
-                        type="button"
-                      >
-                        Send text
-                      </Button>
-                      <UncontrolledTooltip
-                        delay={0}
-                        placement="right"
-                        target="tooltip341148792"
-                      >
-                        Can't wait for your message
-                      </UncontrolledTooltip>
-                    </Form> */}
-                    <form onSubmit={ContactFormSubmit}>
-        {inputFields.map((input, index) => {
-          return (
-            <div key={index}>
-              <Row>
-                        <Col md="6">
-                          <FormGroup>
-                            <label>Your Name</label>
-                            <Input placeholder="Mike" name='name' onChange={event => handleFormChange(index, event)} value={input.name} type="text" />
-                          </FormGroup>
-                        </Col>
-                        <Col md="6">
-                          <FormGroup>
-                            <label>Email address</label>
-                            <Input placeholder="mike@email.com" name='email' onChange={event => handleFormChange(index, event)} value={input.email} type="email" />
-                          </FormGroup>
-                        </Col>
-                      </Row>
-                      <Row>
-                        <Col md="6">
-                          <FormGroup>
-                            <label>Phone</label>
-                            <Input placeholder="+12 1234567890" name='phone' onChange={event => handleFormChange(index, event)} value={input.phone} type="text" />
-                          </FormGroup>
-                        </Col>
-                        <Col md="6">
-                          <FormGroup>
-                            <label>Company</label>
-                            <Input placeholder="My Work Place" name='company' onChange={event => handleFormChange(index, event)} value={input.company} type="email" />
-                          </FormGroup>
-                        </Col>
-                      </Row>
-                      <Row>
-                        <Col md="12">
-                          <FormGroup>
-                            <label>Message</label>
-                            <Input placeholder="I work as a Procurement head and would like to colab" value={input.message} type="text" />
-                          </FormGroup>
-                        </Col>
-                      </Row>
-                      <Button
-                        className="btn-round float-right"
-                        color="primary"
-                        data-placement="right"
-                        id="tooltip341148792"
-                        type="button"
-                        onClick={ContactFormSubmit}
-                      >
-                        Send text
-                      </Button>
-                      
-                      <UncontrolledTooltip
-                        delay={0}
-                        placement="right"
-                        target="tooltip341148792"
-                      >
-                        Can't wait for your message
-                      </UncontrolledTooltip>
-            </div>
-          )
-        })}
-      </form>
-                  </CardBody>
-                </Card>
+            <Row className="justify-content-between">
+              <Col md="5">
+                <h1 className="profile-title text-left">Casino</h1>
+                <h5 className="text-on-back">03</h5>
+                <p className="profile-description text-left">
+                  Some jargon about the Casino.
+                  Some jargon about the Casino.
+                  Some jargon about the Casino.<br/>
+                  Some jargon about the Casino.
+                  Some jargon about the Casino.
+                  Some jargon about the Casino.<br/>
+                  Some jargon about the Casino.
+                  Some jargon about the Casino.
+                </p>
+                <div className="btn-wrapper pt-3">
+                  <Button
+                    className="btn-simple"
+                    color="primary"
+                    href="#pablo"
+                    onClick={(e) => e.preventDefault()}
+                  >
+                    <i className="tim-icons icon-book-bookmark" /> Bookmark
+                  </Button>
+                  <Button
+                    className="btn-simple"
+                    color="info"
+                    href="#pablo"
+                    onClick={(e) => e.preventDefault()}
+                  >
+                    <i className="tim-icons icon-bulb-63" /> Check it!
+                  </Button>
+                </div>
               </Col>
-              <Col className="ml-auto" md="4">
-                <div className="info info-horizontal">
-                  <div className="icon icon-primary">
-                    <i className="tim-icons icon-square-pin" />
-                  </div>
-                  <div className="description">
-                    <h4 className="info-title">Find us at the office</h4>
-                    <p>
-                    Peiraios, 30, 1st Floor, <br />Flat/Office 1 Strovolos,<br /> 2023, Nicosia,<br /> Cyprus
-                    </p>
-                  </div>
-                </div>
-                <div className="info info-horizontal">
-                  <div className="icon icon-primary">
-                    <i className="tim-icons icon-mobile" />
-                  </div>
-                  <div className="description">
-                    <h4 className="info-title">Give us a ring</h4>
-                    <p>
-                      Skytech Admin <br />
-                      +260 123 456 7890<br />
-                      Mon - Fri, 8:00-22:00
-                    </p>
-                  </div>
-                </div>
+              <Col md="6">
+                <Row className="justify-content-between align-items-center">
+                  <UncontrolledCarousel items={carouselItems} />
+                </Row>
               </Col>
             </Row>
           </Container>
-        </section>
+        </div>
+       
         <Footer />
       </div>
     </>
