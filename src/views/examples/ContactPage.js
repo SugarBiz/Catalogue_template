@@ -4,6 +4,8 @@ import classnames from "classnames";
 // javascript plugin used to create scrollbars on windows
 import PerfectScrollbar from "perfect-scrollbar";
 import { useState } from 'react';
+import  { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 // reactstrap components
 import {
   Button,
@@ -55,6 +57,7 @@ let ps = null;
 
 export default function ContactPage() {
   const [tabs, setTabs] = React.useState(1);
+  const form = useRef();
   React.useEffect(() => {
     if (navigator.platform.indexOf("Win") > -1) {
       document.documentElement.className += " perfect-scrollbar-on";
@@ -76,7 +79,7 @@ export default function ContactPage() {
     };
   }, []);
   const [inputFields, setInputFields] = useState([
-    { name: '', email: '', phone: '', company: '', message: '' }
+    { user_name: '', user_email: '', contact_number: '', company: '', message: '' }
   ])
   const [isOpened, setIsOpened] = useState(true);
   const [exisCust, setexisCust] = useState(false);
@@ -87,9 +90,14 @@ export default function ContactPage() {
   }
   const ContactFormSubmit = (e) => {
     e.preventDefault();
-    console.log(inputFields)
-  }
-  
+    // console.log(inputFields)
+    emailjs.sendForm('service_mg319d8', 'template_ncss809', form.current, 'rQk4QXlz29UCXKZZy')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
   const existingCust = (e) => {
     setexisCust(true);
     setpoCust(false)
@@ -113,6 +121,7 @@ export default function ContactPage() {
  }
   return (
     <>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
       <IndexNavbar />
       <div className="wrapper">
         <section className="section">
@@ -147,7 +156,7 @@ I would appreciate it if you could let me know if you are an
        </div>
       )}
                   {!isOpened && exisCust && (  
-                    <form onSubmit={ContactFormSubmit}>
+                    <form ref={form} onSubmit={ContactFormSubmit}>
         {inputFields.map((input, index) => {
           return (
             <div key={index}>
@@ -156,13 +165,13 @@ I would appreciate it if you could let me know if you are an
                         <Col md="6">
                           <FormGroup>
                             <label>Customer ID</label>
-                            <Input placeholder="Mike" name='name' onChange={event => handleFormChange(index, event)} value={input.name} type="text" />
+                            <Input placeholder="Mike" name='user_name' onChange={event => handleFormChange(index, event)} value={input.user_name} type="text" />
                           </FormGroup>
                         </Col>
                         <Col md="6">
                           <FormGroup>
                             <label>Email address</label>
-                            <Input placeholder="mike@email.com" name='email' onChange={event => handleFormChange(index, event)} value={input.email} type="email" />
+                            <Input placeholder="mike@email.com" name='user_email' onChange={event => handleFormChange(index, event)} value={input.user_email} type="email" />
                           </FormGroup>
                         </Col>
                       </Row>
@@ -170,13 +179,13 @@ I would appreciate it if you could let me know if you are an
                         <Col md="6">
                           <FormGroup>
                             <label>Phone</label>
-                            <Input placeholder="+12 1234567890" name='phone' onChange={event => handleFormChange(index, event)} value={input.phone} type="text" />
+                            <Input placeholder="+12 1234567890" name='contact_number' onChange={event => handleFormChange(index, event)} value={input.contact_number} type="text" />
                           </FormGroup>
                         </Col>
                         <Col md="6">
                           <FormGroup>
                             <label>Company</label>
-                            <Input placeholder="My Work Place" name='company' onChange={event => handleFormChange(index, event)} value={input.company} type="email" />
+                            <Input placeholder="My Work Place" name='company' onChange={event => handleFormChange(index, event)} value={input.company} type="text" />
                           </FormGroup>
                         </Col>
                       </Row>
@@ -184,7 +193,7 @@ I would appreciate it if you could let me know if you are an
                         <Col md="12">
                           <FormGroup>
                             <label>Message</label>
-                            <Input placeholder="I work as a Procurement head and would like to colab" value={input.message} type="text" />
+                            <Input placeholder="I work as a Procurement head and would like to colab" name='message' onChange={event => handleFormChange(index, event)} value={input.message} type="text" />
                           </FormGroup>
                         </Col>
                       </Row>
@@ -221,7 +230,7 @@ I would appreciate it if you could let me know if you are an
         })}
       </form> )}
       {!isOpened && poCust && (  
-                    <form onSubmit={ContactFormSubmit}>
+                    <form ref={form} onSubmit={ContactFormSubmit}>
         {inputFields.map((input, index) => {
           return (
             <div key={index}>
@@ -230,13 +239,13 @@ I would appreciate it if you could let me know if you are an
                         <Col md="6">
                           <FormGroup>
                             <label>Your name</label>
-                            <Input placeholder="Mike" name='name' onChange={event => handleFormChange(index, event)} value={input.name} type="text" />
+                            <Input placeholder="Mike" name='user_name' onChange={event => handleFormChange(index, event)} value={input.user_name} type="text" />
                           </FormGroup>
                         </Col>
                         <Col md="6">
                           <FormGroup>
                             <label>Email address</label>
-                            <Input placeholder="mike@email.com" name='email' onChange={event => handleFormChange(index, event)} value={input.email} type="email" />
+                            <Input placeholder="mike@email.com" name='user_email' onChange={event => handleFormChange(index, event)} value={input.user_email} type="email" />
                           </FormGroup>
                         </Col>
                       </Row>
@@ -244,13 +253,13 @@ I would appreciate it if you could let me know if you are an
                         <Col md="6">
                           <FormGroup>
                             <label>Phone</label>
-                            <Input placeholder="+12 1234567890" name='phone' onChange={event => handleFormChange(index, event)} value={input.phone} type="text" />
+                            <Input placeholder="+12 1234567890" name='contact_number' onChange={event => handleFormChange(index, event)} value={input.contact_number} type="text" />
                           </FormGroup>
                         </Col>
                         <Col md="6">
                           <FormGroup>
                             <label>Company</label>
-                            <Input placeholder="My Work Place" name='company' onChange={event => handleFormChange(index, event)} value={input.company} type="email" />
+                            <Input placeholder="My Work Place" name='company' onChange={event => handleFormChange(index, event)} value={input.company} type="text" />
                           </FormGroup>
                         </Col>
                       </Row>
@@ -258,7 +267,7 @@ I would appreciate it if you could let me know if you are an
                         <Col md="12">
                           <FormGroup>
                             <label>Message</label>
-                            <Input placeholder="I work as a Procurement head and would like to colab" value={input.message} type="text" />
+                            <Input placeholder="I work as a Procurement head and would like to colab" name='message' onChange={event => handleFormChange(index, event)} value={input.message} type="text" />
                           </FormGroup>
                         </Col>
                       </Row>

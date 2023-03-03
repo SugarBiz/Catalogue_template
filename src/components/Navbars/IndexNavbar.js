@@ -138,6 +138,17 @@ export default function IndexNavbar() {
                 <p className="d-lg-none d-xl-none">Instagram</p>
               </NavLink>
             </NavItem>
+            <NavItem className="p-0">
+              <NavLink
+                data-placement="bottom"
+                tag={Link} to="/contact-page"
+                rel="noopener noreferrer"
+                title="Want to contact us?"
+              >
+                  <i className="tim-icons icon-single-02" />
+                 Contact Sky
+                </NavLink>
+            </NavItem>
             <UncontrolledDropdown nav>
               <DropdownToggle
                 caret
@@ -148,20 +159,24 @@ export default function IndexNavbar() {
                 onClick={(e) => e.preventDefault()}
               >
                 <i className="fa fa-cogs d-lg-none d-xl-none" />
-                Getting started
+                Products & Services
               </DropdownToggle>
               <DropdownMenu className="dropdown-with-icons">
                 {/* <DropdownItem tag={Link} to="/profile-page">
                   <i className="tim-icons icon-single-02" />
                   Profile Page
                 </DropdownItem> */}
-                <DropdownItem tag={Link} to="/product-page">
+                <DropdownItem tag={Link} to="/product-page1">
                   <i className="tim-icons icon-app" />
-                  Product Page
+                  Platform Account Manager
                 </DropdownItem>
-                <DropdownItem tag={Link} to="/contact-page">
+                <DropdownItem tag={Link} to="/product-page2">
                   <i className="tim-icons icon-single-02" />
-                 Contact Sky
+                 Exchange
+                </DropdownItem>
+                <DropdownItem tag={Link} to="/product-page3">
+                  <i className="tim-icons icon-single-02" />
+                 Casino
                 </DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>

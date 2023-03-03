@@ -10,7 +10,9 @@ import Index from "views/Index.js";
 import LandingPage from "views/examples/LandingPage.js";
 import RegisterPage from "views/examples/RegisterPage.js";
 import ContactPage from "views/examples/ContactPage.js";
-import ProductPage from "views/examples/Product.js";
+import ProductPage1 from "views/examples/Product1.js";
+import ProductPage2 from "views/examples/Product2.js";
+import ProductPage3 from "views/examples/Product3.js";
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -32,9 +34,16 @@ root.render(
         render={(props) => <ContactPage {...props} />}
       />
       <Route
-        path="/product-page"
-        render={(props) => <ProductPage {...props} />}
+        path="/product-page1"
+        render={(props) => <ProductPage1 {...props} />}
       />
+      <Route
+        path="/product-page2"
+        render={(props) => <ProductPage2 {...props} />}
+      /><Route
+      path="/product-page3"
+      render={(props) => <ProductPage3 {...props} />}
+    />
       <Redirect from="/" to="/components" />
     </Switch>
   </BrowserRouter>

@@ -53,7 +53,7 @@ const carouselItems = [
 
 let ps = null;
 
-export default function ProductPage() {
+export default function ProductPage1() {
   const [tabs, setTabs] = React.useState(1);
   React.useEffect(() => {
     if (navigator.platform.indexOf("Win") > -1) {
@@ -306,17 +306,17 @@ export default function ProductPage() {
                 </Row>
               </Col>
               <Col md="5">
-                <h1 className="profile-title text-left">Exchange</h1>
+                <h1 className="profile-title text-left">Player Account Manager</h1>
                 <h5 className="text-on-back">02</h5>
                 <p className="profile-description text-left">
-                  Some jargon about the Exchange.
-                  Some jargon about the Exchange.
-                  Some jargon about the Exchange.<br/>
-                  Some jargon about the Exchange.
-                  Some jargon about the Exchange.
-                  Some jargon about the Exchange.<br/>
-                  Some jargon about the Exchange.
-                  Some jargon about the Exchange.
+                  Some jargon about the Player Account Manager.
+                  Some jargon about the Player Account Manager.
+                  Some jargon about the Player Account Manager.<br/>
+                  Some jargon about the Player Account Manager.
+                  Some jargon about the Player Account Manager.
+                  Some jargon about the Player Account Manager.<br/>
+                  Some jargon about the Player Account Manager.
+                  Some jargon about the Player Account Manager.
                 </p>
                 <div className="btn-wrapper pt-3">
                   <Button
@@ -340,50 +340,6 @@ export default function ProductPage() {
             </Row>
           </Container>
         </div>
-        <div className="section">
-          <Container>
-            <Row className="justify-content-between">
-              <Col md="5">
-                <h1 className="profile-title text-left">Casino</h1>
-                <h5 className="text-on-back">03</h5>
-                <p className="profile-description text-left">
-                  Some jargon about the Casino.
-                  Some jargon about the Casino.
-                  Some jargon about the Casino.<br/>
-                  Some jargon about the Casino.
-                  Some jargon about the Casino.
-                  Some jargon about the Casino.<br/>
-                  Some jargon about the Casino.
-                  Some jargon about the Casino.
-                </p>
-                <div className="btn-wrapper pt-3">
-                  <Button
-                    className="btn-simple"
-                    color="primary"
-                    href="#pablo"
-                    onClick={(e) => e.preventDefault()}
-                  >
-                    <i className="tim-icons icon-book-bookmark" /> Bookmark
-                  </Button>
-                  <Button
-                    className="btn-simple"
-                    color="info"
-                    href="#pablo"
-                    onClick={(e) => e.preventDefault()}
-                  >
-                    <i className="tim-icons icon-bulb-63" /> Check it!
-                  </Button>
-                </div>
-              </Col>
-              <Col md="6">
-                <Row className="justify-content-between align-items-center">
-                  <UncontrolledCarousel items={carouselItems} />
-                </Row>
-              </Col>
-            </Row>
-          </Container>
-        </div>
-       
         <Footer />
       </div>
     </>
