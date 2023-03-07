@@ -1,0 +1,18 @@
+.footerSubHead{
+margin-bottom: -20px;
+}
+.dropdown-menu:before {
+    display: inline-block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    vertical-align: middle;
+    content: "";
+    top: -5px;
+    left: 45px;
+    right: auto;
+    color: #ffffff;
+    border-bottom: 0.4em solid;
+    border-right: 0.4em solid transparent;
+    border-left: 0.4em solid transparent;
+} 

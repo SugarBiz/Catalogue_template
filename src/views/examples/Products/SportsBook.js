@@ -32,6 +32,7 @@ import {
 import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
 import IndexNavbar from "components/Navbars/IndexNavbar.js";
 import Footer from "components/Footer/Footer.js";
+import * as constants from "assets/constant";
 
 const carouselItems = [
   {
@@ -40,12 +41,12 @@ const carouselItems = [
     caption: "Big City Life, United States"
   },
   {
-    src: require("assets/img/reasons-to-throw-a-casino-party-960x675.jpeg"),
+    src: require("assets/img/fabien-bazanegue.jpg"),
     altText: "Slide 2",
     caption: "Somewhere Beyond, United States"
   },
   {
-    src: require("assets/img/casino-baccarat-dealer.jpeg"),
+    src: require("assets/img/mark-finn.jpg"),
     altText: "Slide 3",
     caption: "Stocks, United States"
   }
@@ -53,7 +54,7 @@ const carouselItems = [
 
 let ps = null;
 
-export default function ProductPage3() {
+export default function SportsBook() {
   const [tabs, setTabs] = React.useState(1);
   React.useEffect(() => {
     if (navigator.platform.indexOf("Win") > -1) {
@@ -105,7 +106,7 @@ export default function ProductPage3() {
           <Container className="align-items-center">
             <Row>
               <Col lg="6" md="6">
-                <h1 className="profile-title text-left">Casino</h1>
+                <h1 className="profile-title text-left">Sports Book</h1>
                 <h5 className="text-on-back">01</h5>
                 <p className="profile-description">
                   Project content
@@ -114,7 +115,7 @@ export default function ProductPage3() {
                   <Button
                     className="btn-icon btn-round"
                     color="twitter"
-                    href="https://twitter.com/creativetim"
+                    href={constants.twitterLink}
                     id="tooltip639225725"
                     target="_blank"
                   >
@@ -126,7 +127,7 @@ export default function ProductPage3() {
                   <Button
                     className="btn-icon btn-round"
                     color="facebook"
-                    href="https://www.facebook.com/creativetim"
+                    href={constants.facebookLink}
                     id="tooltip982846143"
                     target="_blank"
                   >
@@ -138,11 +139,11 @@ export default function ProductPage3() {
                   <Button
                     className="btn-icon btn-round"
                     color="dribbble"
-                    href="https://dribbble.com/creativetim"
+                    href={constants.instagramLink}
                     id="tooltip951161185"
                     target="_blank"
                   >
-                    <i className="fab fa-dribbble" />
+                    <i className="fab fa-instagram" />
                   </Button>
                   <UncontrolledTooltip delay={0} target="tooltip951161185">
                     Follow us
@@ -306,17 +307,17 @@ export default function ProductPage3() {
                 </Row>
               </Col>
               <Col md="5">
-                <h1 className="profile-title text-left">Casino</h1>
+                <h1 className="profile-title text-left">Sports Book</h1>
                 <h5 className="text-on-back">02</h5>
                 <p className="profile-description text-left">
-                  Some jargon about the Casino.
-                  Some jargon about the Casino.
-                  Some jargon about the Casino.<br/>
-                  Some jargon about the Casino.
-                  Some jargon about the Casino.
-                  Some jargon about the Casino.<br/>
-                  Some jargon about the Casino.
-                  Some jargon about the Casino.
+                  Some jargon about the Sports Book.
+                  Some jargon about the Sports Book.
+                  Some jargon about the Sports Book.<br/>
+                  Some jargon about the Sports Book.
+                  Some jargon about the Sports Book.
+                  Some jargon about the Sports Book.<br/>
+                  Some jargon about the Sports Book.
+                  Some jargon about the Sports Book.
                 </p>
                 <div className="btn-wrapper pt-3">
                   <Button

@@ -27,6 +27,7 @@ import {
   UncontrolledTooltip,
   UncontrolledCarousel
 } from "reactstrap";
+import * as constants from "assets/constant";
 
 // core components
 import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
@@ -53,7 +54,7 @@ const carouselItems = [
 
 let ps = null;
 
-export default function ProductPage1() {
+export default function Exchange() {
   const [tabs, setTabs] = React.useState(1);
   React.useEffect(() => {
     if (navigator.platform.indexOf("Win") > -1) {
@@ -105,7 +106,7 @@ export default function ProductPage1() {
           <Container className="align-items-center">
             <Row>
               <Col lg="6" md="6">
-                <h1 className="profile-title text-left">Player Account Manager</h1>
+                <h1 className="profile-title text-left">Exchange</h1>
                 <h5 className="text-on-back">01</h5>
                 <p className="profile-description">
                   Project content
@@ -114,7 +115,7 @@ export default function ProductPage1() {
                   <Button
                     className="btn-icon btn-round"
                     color="twitter"
-                    href="https://twitter.com/creativetim"
+                    href={constants.twitterLink}
                     id="tooltip639225725"
                     target="_blank"
                   >
@@ -126,7 +127,7 @@ export default function ProductPage1() {
                   <Button
                     className="btn-icon btn-round"
                     color="facebook"
-                    href="https://www.facebook.com/creativetim"
+                    href={constants.facebookLink}
                     id="tooltip982846143"
                     target="_blank"
                   >
@@ -138,11 +139,11 @@ export default function ProductPage1() {
                   <Button
                     className="btn-icon btn-round"
                     color="dribbble"
-                    href="https://dribbble.com/creativetim"
+                    href={constants.instagramLink}
                     id="tooltip951161185"
                     target="_blank"
                   >
-                    <i className="fab fa-dribbble" />
+                    <i className="fab fa-instagram" />
                   </Button>
                   <UncontrolledTooltip delay={0} target="tooltip951161185">
                     Follow us
@@ -306,17 +307,17 @@ export default function ProductPage1() {
                 </Row>
               </Col>
               <Col md="5">
-                <h1 className="profile-title text-left">Player Account Manager</h1>
+                <h1 className="profile-title text-left">Exchange</h1>
                 <h5 className="text-on-back">02</h5>
                 <p className="profile-description text-left">
-                  Some jargon about the Player Account Manager.
-                  Some jargon about the Player Account Manager.
-                  Some jargon about the Player Account Manager.<br/>
-                  Some jargon about the Player Account Manager.
-                  Some jargon about the Player Account Manager.
-                  Some jargon about the Player Account Manager.<br/>
-                  Some jargon about the Player Account Manager.
-                  Some jargon about the Player Account Manager.
+                  Some jargon about the Exchange.
+                  Some jargon about the Exchange.
+                  Some jargon about the Exchange.<br/>
+                  Some jargon about the Exchange.
+                  Some jargon about the Exchange.
+                  Some jargon about the Exchange.<br/>
+                  Some jargon about the Exchange.
+                  Some jargon about the Exchange.
                 </p>
                 <div className="btn-wrapper pt-3">
                   <Button

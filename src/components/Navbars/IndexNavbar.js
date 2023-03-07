@@ -1,5 +1,5 @@
 
-import React from "react";
+import React, {useState} from "react";
 import { Link } from "react-router-dom";
 // reactstrap components
 import {
@@ -16,9 +16,9 @@ import {
   Nav,
   Container,
   Row,
-  Col,
-  UncontrolledTooltip
+  Col
 } from "reactstrap";
+import * as constants from "assets/constant";
 
 export default function IndexNavbar() {
   const [collapseOpen, setCollapseOpen] = React.useState(false);
@@ -58,6 +58,36 @@ export default function IndexNavbar() {
       .getElementById("download-section")
       .scrollIntoView({ behavior: "smooth" });
   };
+  //for opeing dropdown on hover 
+  const [show, setShow] = useState(false);
+  const [show1, setShow1] = useState(false);
+  const [show2, setShow2] = useState(false);
+  const [show3, setShow3] = useState(false);
+
+const showDropdown = (e)=>{
+    setShow(!show);
+}
+const hideDropdown = e => {
+    setShow(false);
+}
+const showDropdown1 = (e)=>{
+  setShow1(!show);
+}
+const hideDropdown1 = e => {
+  setShow1(false);
+}
+const showDropdown2 = (e)=>{
+  setShow2(!show);
+}
+const hideDropdown2 = e => {
+  setShow2(false);
+}
+const showDropdown3 = (e)=>{
+  setShow3(!show);
+}
+const hideDropdown3 = e => {
+  setShow3(false);
+}
   return (
     <Navbar className={"fixed-top " + color} color-on-scroll="100" expand="lg">
       <Container>
@@ -105,7 +135,7 @@ export default function IndexNavbar() {
             <NavItem className="p-0">
               <NavLink
                 data-placement="bottom"
-                href="https://twitter.com/CreativeTim"
+                href={constants.twitterLink}
                 rel="noopener noreferrer"
                 target="_blank"
                 title="Follow us on Twitter"
@@ -117,7 +147,7 @@ export default function IndexNavbar() {
             <NavItem className="p-0">
               <NavLink
                 data-placement="bottom"
-                href="https://www.facebook.com/CreativeTim"
+                href= {constants.facebookLink}
                 rel="noopener noreferrer"
                 target="_blank"
                 title="Like us on Facebook"
@@ -129,7 +159,7 @@ export default function IndexNavbar() {
             <NavItem className="p-0">
               <NavLink
                 data-placement="bottom"
-                href="https://www.instagram.com/CreativeTimOfficial"
+                href={constants.instagramLink}
                 rel="noopener noreferrer"
                 target="_blank"
                 title="Follow us on Instagram"
@@ -138,6 +168,134 @@ export default function IndexNavbar() {
                 <p className="d-lg-none d-xl-none">Instagram</p>
               </NavLink>
             </NavItem>
+            
+            <UncontrolledDropdown isOpen={show}
+   onMouseEnter={showDropdown} 
+   onMouseLeave={hideDropdown} nav>
+              <DropdownToggle
+                
+                color="default"
+                // data-toggle="dropdown"
+                href="#pablo"
+                nav
+                onClick={(e) => e.preventDefault()
+                }
+              >
+                <i className="fa fa-cogs d-lg-none d-xl-none" />
+                Products
+              </DropdownToggle>
+              <DropdownMenu className="dropdown-with-icons">
+                <DropdownItem tag={Link} to="/PlayerAccount">
+                  <i className="tim-icons icon-app" />
+                  Platform Account Manager
+                </DropdownItem>
+                <DropdownItem tag={Link} to="/Exchange">
+                  <i className="tim-icons icon-planet" />
+                 Exchange
+                </DropdownItem>
+                <DropdownItem tag={Link} to="/Casino">
+                  <i className="tim-icons icon-molecule-40" />
+                 Casino
+                </DropdownItem>
+                <DropdownItem tag={Link} to="/SportsBook">
+                  <i className="tim-icons icon-paper" />
+                 Sports Book
+                </DropdownItem>
+              </DropdownMenu>
+            </UncontrolledDropdown>
+            <UncontrolledDropdown isOpen={show1}
+   onMouseEnter={showDropdown1} 
+   onMouseLeave={hideDropdown1} nav>
+              <DropdownToggle
+                
+                color="default"
+                data-toggle="dropdown"
+                href="#pablo"
+                nav
+                onClick={(e) => e.preventDefault()
+                }
+              >
+                <i className="fa fa-cogs d-lg-none d-xl-none" />
+          Solutions
+              </DropdownToggle>
+              <DropdownMenu className="dropdown-with-icons">
+                <DropdownItem tag={Link} to="/PlayerAccount">
+                  <i className="tim-icons icon-mobile" />
+                 Mobile
+                </DropdownItem>
+                <DropdownItem tag={Link} to="/Exchange">
+                  <i className="tim-icons icon-laptop" />
+                 Desktop
+                </DropdownItem>
+                <DropdownItem tag={Link} to="/Casino">
+                  <i className="tim-icons icon-key-25" />
+                 Turnkey
+                </DropdownItem>
+                <DropdownItem tag={Link} to="/Casino">
+                  <i className="tim-icons icon-single-02" />
+                 B2B Support
+                </DropdownItem>
+              </DropdownMenu>
+            </UncontrolledDropdown>
+            <UncontrolledDropdown isOpen={show2}
+   onMouseEnter={showDropdown2} 
+   onMouseLeave={hideDropdown2} nav>
+              <DropdownToggle
+                color="default"
+                data-toggle="dropdown"
+                href="#pablo"
+                nav
+                onClick={(e) => e.preventDefault()
+                }
+              >
+                <i className="fa fa-cogs d-lg-none d-xl-none" />
+          Company
+              </DropdownToggle>
+              <DropdownMenu className="dropdown-with-icons">
+                <DropdownItem tag={Link} to="/PlayerAccount">
+                  <i className="tim-icons icon-bank" />
+                 About us
+                </DropdownItem>
+                <DropdownItem tag={Link} to="/Exchange">
+                  <i className="tim-icons icon-check-2" />
+               License
+                </DropdownItem>
+                <DropdownItem tag={Link} to="/Casino">
+                  <i className="tim-icons icon-single-02" />
+                 Partners
+                </DropdownItem>
+                <DropdownItem tag={Link} to="/Casino">
+                  <i className="tim-icons icon-satisfied" />
+                 Events
+                </DropdownItem>
+                <DropdownItem tag={Link} to="/Casino">
+                  <i className="tim-icons icon-badge" />
+                 Management
+                </DropdownItem>
+              </DropdownMenu>
+            </UncontrolledDropdown>
+            <NavItem className="p-0">
+              <NavLink
+                data-placement="bottom"
+                tag={Link} to="/contact-page"
+                rel="noopener noreferrer"
+                title="Some update around the industry"
+              >
+                  <i className="tim-icons icon-world" />
+                News
+                </NavLink>
+            </NavItem>
+            <NavItem className="p-0">
+              <NavLink
+                data-placement="bottom"
+                tag={Link} to="/contact-page"
+                rel="noopener noreferrer"
+                title="Blogs !!"
+              >
+                  <i className="tim-icons icon-book-bookmark" />
+                 Blogs
+                </NavLink>
+            </NavItem>
             <NavItem className="p-0">
               <NavLink
                 data-placement="bottom"
@@ -145,41 +303,10 @@ export default function IndexNavbar() {
                 rel="noopener noreferrer"
                 title="Want to contact us?"
               >
-                  <i className="tim-icons icon-single-02" />
+                  <i className="tim-icons icon-email-85" />
                  Contact Sky
                 </NavLink>
             </NavItem>
-            <UncontrolledDropdown nav>
-              <DropdownToggle
-                caret
-                color="default"
-                data-toggle="dropdown"
-                href="#pablo"
-                nav
-                onClick={(e) => e.preventDefault()}
-              >
-                <i className="fa fa-cogs d-lg-none d-xl-none" />
-                Products & Services
-              </DropdownToggle>
-              <DropdownMenu className="dropdown-with-icons">
-                {/* <DropdownItem tag={Link} to="/profile-page">
-                  <i className="tim-icons icon-single-02" />
-                  Profile Page
-                </DropdownItem> */}
-                <DropdownItem tag={Link} to="/product-page1">
-                  <i className="tim-icons icon-app" />
-                  Platform Account Manager
-                </DropdownItem>
-                <DropdownItem tag={Link} to="/product-page2">
-                  <i className="tim-icons icon-single-02" />
-                 Exchange
-                </DropdownItem>
-                <DropdownItem tag={Link} to="/product-page3">
-                  <i className="tim-icons icon-single-02" />
-                 Casino
-                </DropdownItem>
-              </DropdownMenu>
-            </UncontrolledDropdown>
           </Nav>
         </Collapse>
       </Container>

@@ -5,14 +5,16 @@ import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 import "assets/css/nucleo-icons.css";
 import "assets/scss/blk-design-system-react.scss";
 import "assets/demo/demo.css";
+import "assets/css/Sky.css";
 
 import Index from "views/Index.js";
 import LandingPage from "views/examples/LandingPage.js";
 import RegisterPage from "views/examples/RegisterPage.js";
 import ContactPage from "views/examples/ContactPage.js";
-import ProductPage1 from "views/examples/Product1.js";
-import ProductPage2 from "views/examples/Product2.js";
-import ProductPage3 from "views/examples/Product3.js";
+import PlayerAccount from "views/examples/Products/PlayerAccount.js";
+import Exchange from "views/examples/Products/Exchange.js";
+import Casino from "views/examples/Products/Casino.js";
+import SportsBook from "views/examples/Products/SportsBook.js";
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -34,15 +36,20 @@ root.render(
         render={(props) => <ContactPage {...props} />}
       />
       <Route
-        path="/product-page1"
-        render={(props) => <ProductPage1 {...props} />}
+        path="/PlayerAccount"
+        render={(props) => <PlayerAccount {...props} />}
       />
       <Route
-        path="/product-page2"
-        render={(props) => <ProductPage2 {...props} />}
-      /><Route
-      path="/product-page3"
-      render={(props) => <ProductPage3 {...props} />}
+        path="/Exchange"
+        render={(props) => <Exchange {...props} />}
+      />
+      <Route
+      path="/Casino"
+      render={(props) => <Casino {...props} />}
+    />
+    <Route
+      path="/SportsBook"
+      render={(props) => <SportsBook {...props} />}
     />
       <Redirect from="/" to="/components" />
     </Switch>
