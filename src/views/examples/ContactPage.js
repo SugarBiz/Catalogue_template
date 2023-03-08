@@ -81,9 +81,9 @@ export default function ContactPage() {
   const [inputFields, setInputFields] = useState([
     { user_name: '', user_email: '', contact_number: '', company: '', message: '' }
   ])
-  const [isOpened, setIsOpened] = useState(true);
+  const [isOpened, setIsOpened] = useState(false);
   const [exisCust, setexisCust] = useState(false);
-  const [poCust, setpoCust] = useState(false);
+  const [poCust, setpoCust] = useState(true);
 
   function toggle() {
     setIsOpened(wasOpened => !wasOpened);
@@ -94,12 +94,14 @@ export default function ContactPage() {
     emailjs.sendForm('service_mg319d8', 'template_ncss809', form.current, 'rQk4QXlz29UCXKZZy')
       .then((result) => {
           console.log(result.text);
+          setpoCust(false)
+    setIsOpened(true)
       }, (error) => {
           console.log(error.text);
       });
   };
   const existingCust = (e) => {
-    setexisCust(true);
+    setexisCust(false);
     setpoCust(false)
     setIsOpened(false)
   }
@@ -111,8 +113,8 @@ export default function ContactPage() {
   
   const BackBtn = (e) => {
     setexisCust(false);
-    setpoCust(false)
-    setIsOpened(true)
+    setpoCust(true)
+    setIsOpened(false)
   }
   const handleFormChange = (index, event) => {
     let data = [...inputFields];
@@ -135,25 +137,26 @@ export default function ContactPage() {
                   </CardHeader>
                   <CardBody>
                   {isOpened && (
-       <div>
-I would appreciate it if you could let me know if you are an
-<Button
-                        className="btn-round col-md-12"
-                        color="primary"
-                        type="button"
-                        onClick={existingCust}
-                      >
-                        Exixting Customer
-                      </Button>
-                      <Button
-                        className="btn-round col-md-12"
-                        color="primary"
-                        type="button"
-                        onClick={PotCustomer}
-                      >
-                        Potential Customer
-                      </Button>
-       </div>
+                    <h3>Your contact request has been recorded and a member of the team will get back to you shortly.</h3>
+//        <div>
+// I would appreciate it if you could let me know if you are an
+// <Button
+//                         className="btn-round col-md-12"
+//                         color="primary"
+//                         type="button"
+//                         onClick={existingCust}
+//                       >
+//                         Exixting Customer
+//                       </Button>
+//                       <Button
+//                         className="btn-round col-md-12"
+//                         color="primary"
+//                         type="button"
+//                         onClick={PotCustomer}
+//                       >
+//                         Potential Customer
+//                       </Button>
+//        </div>
       )}
                   {!isOpened && exisCust && (  
                     <form ref={form} onSubmit={ContactFormSubmit}>
@@ -281,7 +284,7 @@ I would appreciate it if you could let me know if you are an
                       >
                         Send text
                       </Button>
-                      <Button
+                      {/* <Button
                       className="btn-round float-right"
                         color="primary"
                         data-placement="right"
@@ -290,7 +293,7 @@ I would appreciate it if you could let me know if you are an
                         onClick={BackBtn}
                       >
                         Back
-                      </Button>
+                      </Button> */}
                       
                       <UncontrolledTooltip
                         delay={0}
@@ -299,13 +302,13 @@ I would appreciate it if you could let me know if you are an
                       >
                         Can't wait for your message
                       </UncontrolledTooltip>
-                      <UncontrolledTooltip
+                      {/* <UncontrolledTooltip
                         delay={0}
                         placement="right"
                         target="tooltip341148793"
                       >
                         Let's Change my selection
-                      </UncontrolledTooltip>
+                      </UncontrolledTooltip> */}
             </div>
           )
         })}

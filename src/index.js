@@ -15,6 +15,15 @@ import PlayerAccount from "views/examples/Products/PlayerAccount.js";
 import Exchange from "views/examples/Products/Exchange.js";
 import Casino from "views/examples/Products/Casino.js";
 import SportsBook from "views/examples/Products/SportsBook.js";
+import Desktop from "views/examples/Services/Desktop.js"
+import Mobile from "views/examples/Services/Mobile.js"
+import Turnkey from "views/examples/Services/Turnkey.js"
+import BBSupport from "views/examples/Services/BBSupport.js"
+import License from "views/examples/Company/license";
+import Management from "views/examples/Company/Management";
+import AboutUs from "views/examples/Company/Events.js"
+import Events from "views/examples/Company/About.js"
+import Partners from "views/examples/Company/Partners";
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -51,6 +60,42 @@ root.render(
       path="/SportsBook"
       render={(props) => <SportsBook {...props} />}
     />
+    <Route
+        path="/B2BSupport"
+        render={(props) => <BBSupport {...props} />}
+      />
+      <Route
+        path="/Desktop"
+        render={(props) => <Desktop {...props} />}
+      />
+      <Route
+      path="/Mobile"
+      render={(props) => <Mobile {...props} />}
+    />
+    <Route
+      path="/Turnkey"
+      render={(props) => <Turnkey {...props} />}
+    />
+    <Route
+        path="/Management"
+        render={(props) => <Management {...props} />}
+      />
+      <Route
+        path="/AboutUs"
+        render={(props) => <AboutUs {...props} />}
+      />
+      <Route
+        path="/License"
+        render={(props) => <License {...props} />}
+      />
+      <Route
+        path="/Partners"
+        render={(props) => <Partners {...props} />}
+      />
+      <Route
+        path="/Events"
+        render={(props) => <Events {...props} />}
+      />
       <Redirect from="/" to="/components" />
     </Switch>
   </BrowserRouter>
