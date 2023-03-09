@@ -28,33 +28,29 @@ export default function Footer() {
           <h3 className="title footerSubHead">Company</h3>
             <Nav>
               <NavItem>
-                <NavLink to="/" tag={Link}>
-                  Home
-                </NavLink>
               </NavItem>
               <NavItem>
-              </NavItem>
-              <NavItem>
-                <NavLink to="/contact-page" tag={Link}>
+                <NavLink to="/AboutUs" tag={Link}>
                   About Us
                 </NavLink>
               </NavItem>
-              <NavItem>
+              {/* <NavItem>
                 <NavLink to="/contact-page" tag={Link}>
                   Career
                 </NavLink>
-              </NavItem><NavItem>
-                <NavLink to="/contact-page" tag={Link}>
+              </NavItem> */}
+              <NavItem>
+                <NavLink to="/Management" tag={Link}>
                  Management
                 </NavLink>
               </NavItem>
           <NavItem>
-                <NavLink to="/contact-page" tag={Link}>
+                <NavLink to="/Events" tag={Link}>
                  Enents
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink to="/contact-page" tag={Link}>
+                <NavLink to="/License" tag={Link}>
                  License
                 </NavLink>
               </NavItem>
@@ -90,23 +86,23 @@ export default function Footer() {
           <h3 className="title footerSubHead">Solutions</h3>
             <Nav>
               <NavItem>
-                <NavLink to="/" tag={Link}>
+                <NavLink to="/Mobile" tag={Link}>
                   Mobile
                 </NavLink>
               </NavItem>
               <NavItem>
               </NavItem>
               <NavItem>
-                <NavLink to="/contact-page" tag={Link}>
+                <NavLink to="/Desktop" tag={Link}>
                   Desktop
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink to="/contact-page" tag={Link}>
+                <NavLink to="/Turnkey" tag={Link}>
                   Turnkey
                 </NavLink>
               </NavItem><NavItem>
-                <NavLink to="/contact-page" tag={Link}>
+                <NavLink to="/B2BSupport" tag={Link}>
                  B2B Support
                 </NavLink>
               </NavItem>

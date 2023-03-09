@@ -219,19 +219,19 @@ const hideDropdown3 = e => {
           Solutions
               </DropdownToggle>
               <DropdownMenu className="dropdown-with-icons">
-                <DropdownItem tag={Link} to="/PlayerAccount">
+                <DropdownItem tag={Link} to="/Mobile">
                   <i className="tim-icons icon-mobile" />
                  Mobile
                 </DropdownItem>
-                <DropdownItem tag={Link} to="/Exchange">
+                <DropdownItem tag={Link} to="/Desktop">
                   <i className="tim-icons icon-laptop" />
                  Desktop
                 </DropdownItem>
-                <DropdownItem tag={Link} to="/Casino">
+                <DropdownItem tag={Link} to="/Turnkey">
                   <i className="tim-icons icon-key-25" />
                  Turnkey
                 </DropdownItem>
-                <DropdownItem tag={Link} to="/Casino">
+                <DropdownItem tag={Link} to="/B2BSupport">
                   <i className="tim-icons icon-single-02" />
                  B2B Support
                 </DropdownItem>
@@ -252,23 +252,23 @@ const hideDropdown3 = e => {
           Company
               </DropdownToggle>
               <DropdownMenu className="dropdown-with-icons">
-                <DropdownItem tag={Link} to="/PlayerAccount">
+                <DropdownItem tag={Link} to="/AboutUs">
                   <i className="tim-icons icon-bank" />
                  About us
                 </DropdownItem>
-                <DropdownItem tag={Link} to="/Exchange">
+                <DropdownItem tag={Link} to="/License">
                   <i className="tim-icons icon-check-2" />
                License
                 </DropdownItem>
-                <DropdownItem tag={Link} to="/Casino">
+                <DropdownItem tag={Link} to="/Partners">
                   <i className="tim-icons icon-single-02" />
                  Partners
                 </DropdownItem>
-                <DropdownItem tag={Link} to="/Casino">
+                <DropdownItem tag={Link} to="/Events">
                   <i className="tim-icons icon-satisfied" />
                  Events
                 </DropdownItem>
-                <DropdownItem tag={Link} to="/Casino">
+                <DropdownItem tag={Link} to="/Management">
                   <i className="tim-icons icon-badge" />
                  Management
                 </DropdownItem>

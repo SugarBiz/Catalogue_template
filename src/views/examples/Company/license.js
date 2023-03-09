@@ -319,22 +319,7 @@ export default function License() {
                   Some jargon about the License.
                 </p>
                 <div className="btn-wrapper pt-3">
-                  <Button
-                    className="btn-simple"
-                    color="primary"
-                    href="#pablo"
-                    onClick={(e) => e.preventDefault()}
-                  >
-                    <i className="tim-icons icon-book-bookmark" /> Bookmark
-                  </Button>
-                  <Button
-                    className="btn-simple"
-                    color="info"
-                    href="#pablo"
-                    onClick={(e) => e.preventDefault()}
-                  >
-                    <i className="tim-icons icon-bulb-63" /> Check it!
-                  </Button>
+
                 </div>
               </Col>
             </Row>

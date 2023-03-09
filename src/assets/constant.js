@@ -1,3 +1,7 @@
 export const facebookLink = "https://www.facebook.com/"
 export const instagramLink = 'https://www.instagram.com/';
 export const twitterLink = 'https://twitter.com/';
+export const casinoJargon = 'CASIONO CASINO, I love Casino. CASIONO CASINO, I love Casino. CASIONO CASINO, I love Casino. CASIONO CASINO, I love Casino. CASIONO CASINO, I love Casino. CASIONO CASINO, I love Casino. CASIONO CASINO, I love Casino. CASIONO CASINO, I love Casino. CASIONO CASINO, I love Casino. CASIONO CASINO, I love Casino. CASIONO CASINO, I love Casino. CASIONO CASINO, I love Casino. CASIONO CASINO, I love Casino.'
+export const ExchangeJargon= "Exchange. I love Excahnge. Exchange. I love Excahnge. Exchange. I love Excahnge. Exchange. I love Excahnge. Exchange. I love Excahnge. Exchange. I love Excahnge. Exchange. I love Excahnge. Exchange. I love Excahnge. "
+export const pamJargon ="Player Account Manager. I love Player Account Manager Player Account Manager. I love Player Account Manager Player Account Manager. I love Player Account Manager Player Account Manager. I love Player Account Manager Player Account Manager. I love Player Account Manager Player Account Manager. I love Player Account Manager Player Account Manager. I love Player Account Manager "
+export const sportBookJargon = "Sports Book. I love Sports book. Sports Book. I love Sports book. Sports Book. I love Sports book. Sports Book. I love Sports book. Sports Book. I love Sports book. Sports Book. I love Sports book. Sports Book. I love Sports book. Sports Book. I love Sports book"
