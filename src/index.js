@@ -20,11 +20,12 @@ import Mobile from "views/examples/Services/Mobile.js"
 import Turnkey from "views/examples/Services/Turnkey.js"
 import BBSupport from "views/examples/Services/BBSupport.js"
 import License from "views/examples/Company/license";
-import Management from "views/examples/Company/Management";
-import AboutUs from "views/examples/Company/Events.js"
-import Events from "views/examples/Company/About.js"
-import Partners from "views/examples/Company/Partners";
-
+import Management from "views/examples/Company/Management.js";
+import AboutUs from "views/examples/Company/About.js"
+import Events from "views/examples/Company/Events.js"
+import Partners from "views/examples/Company/Partners.js";
+import News from "views/examples/Services/News"
+import Blogs from "views/examples/Services/Blogs"
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -96,6 +97,13 @@ root.render(
         path="/Events"
         render={(props) => <Events {...props} />}
       />
+      <Route
+        path="/News"
+        render={(props) => <News {...props} />}
+      /><Route
+      path="/Blogs"
+      render={(props) => <Blogs {...props} />}
+    />
       <Redirect from="/" to="/components" />
     </Switch>
   </BrowserRouter>

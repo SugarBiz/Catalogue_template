@@ -277,7 +277,7 @@ const hideDropdown3 = e => {
             <NavItem className="p-0">
               <NavLink
                 data-placement="bottom"
-                tag={Link} to="/contact-page"
+                tag={Link} to="/News"
                 rel="noopener noreferrer"
                 title="Some update around the industry"
               >
@@ -288,7 +288,7 @@ const hideDropdown3 = e => {
             <NavItem className="p-0">
               <NavLink
                 data-placement="bottom"
-                tag={Link} to="/contact-page"
+                tag={Link} to="/Blogs"
                 rel="noopener noreferrer"
                 title="Blogs !!"
               >

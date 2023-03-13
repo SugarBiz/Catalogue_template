@@ -27,6 +27,17 @@ margin-bottom: -20px;
   max-width: 100%;
   max-height: 850px;
 }
+.mH400{
+  max-height: 400px;
+}
+.containerImg2 {
+  width: 100%;
+  padding-right: 0px;
+  padding-left: 0px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 16vh !important;
+}
 .centered {
     position: absolute;
     top: 12px;
@@ -39,12 +50,25 @@ margin-bottom: -20px;
     font-family: -webkit-body;
     font-weight: bold;
     color: peachpuff;
+    margin-right: auto;
+    margin-left: auto;
+    -webkit-text-stroke: 2px midnightblue;
+    margin-top: 84px; 
+  }
+  .productFontsb {
+    font-size: 5.625rem;
+  }
+  .productFontbb {
+    font-size: 5.25rem;
   }
   .profile-page .profile-description {
     margin-top: -30px;
     max-width: unset;
     font-size: 0.875rem;
     line-height: 26px;
+}
+.Mt-30{
+  margin-top: -30px;
 }
 .imgageAniCover{
     -o-object-fit: cover;
@@ -55,8 +79,16 @@ margin-bottom: -20px;
 .coverButton{
   z-index: 1;
   position: absolute;
-  top: 100px;
-  left: 150px;
+  top: 120px;
+  left: 100px;
+  color: darkblue;
+  border-color: peachpuff;
+  background: peachpuff;
+}
+.coverButton2{
+  z-index: 1;
+  position: absolute;
+
   color: darkblue;
   border-color: peachpuff;
   background: peachpuff;
@@ -66,4 +98,147 @@ margin-bottom: -20px;
 }
 .profile-page .page-header {
   min-height: 320px;
+}
+.text-on-back {
+  position: relative;
+  z-index: 1;
+  font-size: 6.5em;
+  margin-left: -4px;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+@media (min-width: 768px) {
+  .info:first-of-type {
+    padding-top: 28%;
+}}
+@media (max-width: 992px) {
+  .productFont{
+    font-size: 4.0625rem;
+    margin-top: 0px; 
+  }
+  .productFontsb {
+    font-size: 3.625rem;
+  }
+  .productFontbb {
+    font-size: 3.25rem;
+  }
+}
+#model2 .member
+{
+    margin: 20px 15px;
+    border-radius: 0;
+    height: auto;
+    background-color: #fff;
+    transition: all 1s;
+}
+
+#model2 .description
+{
+    width: 400px;
+    height: 400px;
+    position: relative;
+    transition: all 1s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#model2 .member
+{
+    cursor: pointer;
+    transition: all 1s;
+}
+
+#model2 .description h1
+{
+    color: rgb(159 154 172);
+}
+
+#model2 .description h2
+{
+    font-family: 'Poppins', sans-serif;
+    color: #F21B3F;
+    font-weight: 600;
+}
+
+#model2 .description .social-media svg
+{
+    color: rgba(8,61,119);
+    font-size: 35px;
+    margin-left: 8px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+/* hover effect */
+#model2 .member:hover
+{
+    border-radius: 15px;
+    background-color: rgba(8,61,119 , 0.15);
+    transform: scale(1.01);
+}
+
+#model2 .description .social-media svg:hover
+{
+    transform: scale(1.1);
+    color: #F21B3F;
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+    #model2 .member
+    {
+        display: flex;
+    }
+    
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+  
+    #model2 .member:nth-child(2),#model2 .member:nth-child(4)
+    {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    
+}
+.model-title
+{
+    text-align: center;
+    margin: 100px auto auto 0;
+    font-size: 50px;
+    color: #272c60;
+}
+
+.divider
+{
+    width: 75px;
+    height: 4px;
+    background-color: #272c60;
+    position: relative;
+    margin: 20px auto 60px;
+}
+
+.members
+{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.member
+{
+    margin: 20px 15px;
+    border-radius: 10px;
+    padding: 0;
+    height: 400px;
+    overflow: hidden;
+}
+
+.member:hover
+{
+    transform: scale(1.01);
 }

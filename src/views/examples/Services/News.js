@@ -35,25 +35,25 @@ import Footer from "components/Footer/Footer.js";
 
 const carouselItems = [
   {
-    src: require("assets/img/denys.jpg"),
+    src: require("assets/img/License1.png"),
     altText: "Slide 1",
     caption: "Big City Life, United States"
   },
   {
-    src: require("assets/img/reasons-to-throw-a-casino-party-960x675.jpeg"),
+    src: require("assets/img/license2.jpeg"),
     altText: "Slide 2",
     caption: "Somewhere Beyond, United States"
   },
-  {
-    src: require("assets/img/casino-baccarat-dealer.jpeg"),
-    altText: "Slide 3",
-    caption: "Stocks, United States"
-  }
+  // {
+  //   src: require("assets/img/license3.jpeg"),
+  //   altText: "Slide 3",
+  //   caption: "Stocks, United States"
+  // }
 ];
 
 let ps = null;
 
-export default function BBSupport() {
+export default function News() {
   const [tabs, setTabs] = React.useState(1);
   React.useEffect(() => {
     if (navigator.platform.indexOf("Win") > -1) {
@@ -92,8 +92,8 @@ export default function BBSupport() {
           />
           <Container className="align-items-center containerImg2">
             <Row>
-              <Col lg="5" md="5">
-                <h5 className="productFont productFontbb">B2B Support</h5>
+              <Col lg="4" md="4">
+                <h5 className="productFont">News</h5>
                 <div className="btn-wrapper profile pt-3">
                   <Button
                     className="btn-icon btn-round"
@@ -133,7 +133,7 @@ export default function BBSupport() {
                   </UncontrolledTooltip>
                 </div>
               </Col>
-              <Col md="7">
+              <Col md="8">
                 <Row className="justify-content-between mH400 align-items-center">
                   <UncontrolledCarousel items={carouselItems} />
                 </Row>
@@ -146,7 +146,7 @@ export default function BBSupport() {
             <Row className="justify-content-between">
               <Col md="9">
                 <p className="profile-description text-left">
-                  {constants.bbSupJargon}<br/>
+                  {constants.licenseJargon}<br/>
                   {constants.genericConclusion1}<br/>
                   {constants.genericConclusion2}
                 </p>

@@ -35,20 +35,20 @@ import Footer from "components/Footer/Footer.js";
 
 const carouselItems = [
   {
-    src: require("assets/img/denys.jpg"),
+    src: require("assets/img/License1.png"),
     altText: "Slide 1",
     caption: "Big City Life, United States"
   },
   {
-    src: require("assets/img/reasons-to-throw-a-casino-party-960x675.jpeg"),
+    src: require("assets/img/license2.jpeg"),
     altText: "Slide 2",
     caption: "Somewhere Beyond, United States"
   },
-  {
-    src: require("assets/img/casino-baccarat-dealer.jpeg"),
-    altText: "Slide 3",
-    caption: "Stocks, United States"
-  }
+  // {
+  //   src: require("assets/img/license3.jpeg"),
+  //   altText: "Slide 3",
+  //   caption: "Stocks, United States"
+  // }
 ];
 
 let ps = null;
@@ -75,18 +75,6 @@ export default function License() {
       document.body.classList.toggle("profile-page");
     };
   }, []);
-  const [inputFields, setInputFields] = useState([
-    { name: '', email: '', phone: '', company: '', message: '' }
-  ])
-  const ContactFormSubmit = (e) => {
-    e.preventDefault();
-    console.log(inputFields)
-  }
-  const handleFormChange = (index, event) => {
-    let data = [...inputFields];
-    data[index][event.target.name] = event.target.value;
-    setInputFields(data);
- }
   return (
     <>
       <IndexNavbar />
@@ -102,14 +90,11 @@ export default function License() {
             className="path"
             src={require("assets/img/path4.png")}
           />
-          <Container className="align-items-center">
+          <Container className="align-items-center containerImg2">
             <Row>
-              <Col lg="6" md="6">
-                <h1 className="profile-title text-left">License</h1>
-                <h5 className="text-on-back">01</h5>
-                <p className="profile-description">
-                  Project content
-                </p>
+              <Col lg="4" md="4">
+                {/* <h1 className="profile-title text-left">License</h1> */}
+                <h5 className="productFont">License</h5>
                 <div className="btn-wrapper profile pt-3">
                   <Button
                     className="btn-icon btn-round"
@@ -149,150 +134,10 @@ export default function License() {
                   </UncontrolledTooltip>
                 </div>
               </Col>
-              <Col className="ml-auto mr-auto" lg="4" md="6">
-                <Card className="card-coin card-plain">
-                  <CardHeader>
-                    <img
-                      alt="..."
-                      className="img-center img-fluid rounded-circle"
-                      src={require("assets/img/mike.jpg")}
-                    />
-                    <h4 className="title">Transactions</h4>
-                  </CardHeader>
-                  <CardBody>
-                    <Nav
-                      className="nav-tabs-primary justify-content-center"
-                      tabs
-                    >
-                      <NavItem>
-                        <NavLink
-                          className={classnames({
-                            active: tabs === 1
-                          })}
-                          onClick={(e) => {
-                            e.preventDefault();
-                            setTabs(1);
-                          }}
-                          href="#pablo"
-                        >
-                          Wallet
-                        </NavLink>
-                      </NavItem>
-                      <NavItem>
-                        <NavLink
-                          className={classnames({
-                            active: tabs === 2
-                          })}
-                          onClick={(e) => {
-                            e.preventDefault();
-                            setTabs(2);
-                          }}
-                          href="#pablo"
-                        >
-                          Send
-                        </NavLink>
-                      </NavItem>
-                      <NavItem>
-                        <NavLink
-                          className={classnames({
-                            active: tabs === 3
-                          })}
-                          onClick={(e) => {
-                            e.preventDefault();
-                            setTabs(3);
-                          }}
-                          href="#pablo"
-                        >
-                          News
-                        </NavLink>
-                      </NavItem>
-                    </Nav>
-                    <TabContent
-                      className="tab-subcategories"
-                      activeTab={"tab" + tabs}
-                    >
-                      <TabPane tabId="tab1">
-                        <Table className="tablesorter" responsive>
-                          <thead className="text-primary">
-                            <tr>
-                              <th className="header">COIN</th>
-                              <th className="header">AMOUNT</th>
-                              <th className="header">VALUE</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td>BTC</td>
-                              <td>7.342</td>
-                              <td>48,870.75 USD</td>
-                            </tr>
-                            <tr>
-                              <td>ETH</td>
-                              <td>30.737</td>
-                              <td>64,53.30 USD</td>
-                            </tr>
-                            <tr>
-                              <td>XRP</td>
-                              <td>19.242</td>
-                              <td>18,354.96 USD</td>
-                            </tr>
-                          </tbody>
-                        </Table>
-                      </TabPane>
-                      <TabPane tabId="tab2">
-                        <Row>
-                          <Label sm="3">Pay to</Label>
-                          <Col sm="9">
-                            <FormGroup>
-                              <Input
-                                placeholder="e.g. 1Nasd92348hU984353hfid"
-                                type="text"
-                              />
-                              <FormText color="default" tag="span">
-                                Please enter a valid address.
-                              </FormText>
-                            </FormGroup>
-                          </Col>
-                        </Row>
-                        <Row>
-                          <Label sm="3">Amount</Label>
-                          <Col sm="9">
-                            <FormGroup>
-                              <Input placeholder="1.587" type="text" />
-                            </FormGroup>
-                          </Col>
-                        </Row>
-                        <Button
-                          className="btn-simple btn-icon btn-round float-right"
-                          color="primary"
-                          type="submit"
-                        >
-                          <i className="tim-icons icon-send" />
-                        </Button>
-                      </TabPane>
-                      <TabPane tabId="tab3">
-                        <Table className="tablesorter" responsive>
-                          <thead className="text-primary">
-                            <tr>
-                              <th className="header">Latest Crypto News</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td>The Daily: Nexo to Pay on Stable...</td>
-                            </tr>
-                            <tr>
-                              <td>Venezuela Begins Public of Nation...</td>
-                            </tr>
-                            <tr>
-                              <td>PR: BitCanna – Dutch Blockchain...</td>
-                            </tr>
-                          </tbody>
-                        </Table>
-                      </TabPane>
-                    </TabContent>
-                  </CardBody>
-                </Card>
+              <Col md="8">
+                <Row className="justify-content-between mH400 align-items-center">
+                  <UncontrolledCarousel items={carouselItems} />
+                </Row>
               </Col>
             </Row>
           </Container>
@@ -300,26 +145,27 @@ export default function License() {
         <div className="section">
           <Container>
             <Row className="justify-content-between">
-              <Col md="6">
-                <Row className="justify-content-between align-items-center">
-                  <UncontrolledCarousel items={carouselItems} />
-                </Row>
-              </Col>
-              <Col md="5">
-                <h1 className="profile-title text-left">License</h1>
-                <h5 className="text-on-back">02</h5>
+              <Col md="9">
                 <p className="profile-description text-left">
-                  Some jargon about the License.
-                  Some jargon about the License.
-                  Some jargon about the License.<br/>
-                  Some jargon about the License.
-                  Some jargon about the License.
-                  Some jargon about the License.<br/>
-                  Some jargon about the License.
-                  Some jargon about the License.
+                  {constants.licenseJargon}<br/>
+                  {constants.genericConclusion1}<br/>
+                  {constants.genericConclusion2}
                 </p>
-                <div className="btn-wrapper pt-3">
-
+              </Col>
+              <Col md="3">
+              <div className="btn-wrapper pt-3">
+                <Button
+                    className="coverButton2"
+                    href="/contact-page"
+                    id="tooltip982846146"
+                    target="_blank"
+                  >
+                    <i className="tim-icons cvrIngIcon icon-email-85" />
+                    Contact us
+                  </Button>
+                  <UncontrolledTooltip delay={0} target="tooltip982846146">
+                    Contact us for further details
+                  </UncontrolledTooltip>
                 </div>
               </Col>
             </Row>

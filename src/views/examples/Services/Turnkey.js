@@ -80,43 +80,21 @@ export default function Turnkey() {
       <IndexNavbar />
       <div className="wrapper">
         <div className="page-header">
-          <img alt="..." className="dots" src={require("assets/img/dots.png")} />
-          <img alt="..." className="path" src={require("assets/img/path4.png")} />
-          <Container className="align-items-center containerImg">
+          <img
+            alt="..."
+            className="dots"
+            src={require("assets/img/dots.png")}
+          />
+          <img
+            alt="..."
+            className="path"
+            src={require("assets/img/path4.png")}
+          />
+          <Container className="align-items-center containerImg2">
             <Row>
-              <Col md="12">
-                <div className="justify-content-between align-items-center">
-                  <UncontrolledCarousel items={carouselItems} />
-                  <h1 className="centered productFont">Casino</h1>
-                  <Button
-                    className="coverButton"
-                    href="/contact-page"
-                    id="tooltip982846146"
-                    target="_blank"
-                  >
-                    <i className="tim-icons cvrIngIcon icon-email-85" />
-                    Contact us
-                  </Button>
-                  <UncontrolledTooltip delay={0} target="tooltip982846146">
-                    Contact us for further details
-                  </UncontrolledTooltip>
-                  
-                </div>
-              </Col>
-           
-            </Row>
-          </Container>
-        </div>
-        <div className="section">
-          <Container>
-            <Row className="justify-content-between">
-            <Col md="12">
-                <p className="profile-description text-left">
-                 {constants.casinoJargon}
-                </p>
-                <div className="btn-wrapper pt-3">
-
-                  <div className="btn-wrapper profile pt-3">
+              <Col lg="4" md="4">
+                <h5 className="productFont">Turnkey</h5>
+                <div className="btn-wrapper profile pt-3">
                   <Button
                     className="btn-icon btn-round"
                     color="twitter"
@@ -154,6 +132,39 @@ export default function Turnkey() {
                     Follow us
                   </UncontrolledTooltip>
                 </div>
+              </Col>
+              <Col md="8">
+                <Row className="justify-content-between mH400 align-items-center">
+                  <UncontrolledCarousel items={carouselItems} />
+                </Row>
+              </Col>
+            </Row>
+          </Container>
+        </div>
+        <div className="section">
+          <Container>
+            <Row className="justify-content-between">
+              <Col md="9">
+                <p className="profile-description text-left">
+                  {constants.turnkeyJargon}<br/>
+                  {constants.genericConclusion1}<br/>
+                  {constants.genericConclusion2}
+                </p>
+              </Col>
+              <Col md="3">
+              <div className="btn-wrapper pt-3">
+                <Button
+                    className="coverButton2"
+                    href="/contact-page"
+                    id="tooltip982846146"
+                    target="_blank"
+                  >
+                    <i className="tim-icons cvrIngIcon icon-email-85" />
+                    Contact us
+                  </Button>
+                  <UncontrolledTooltip delay={0} target="tooltip982846146">
+                    Contact us for further details
+                  </UncontrolledTooltip>
                 </div>
               </Col>
             </Row>
