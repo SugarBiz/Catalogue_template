@@ -28,52 +28,52 @@ import News from "views/examples/Services/News"
 import Blogs from "views/examples/Services/Blogs"
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-
+const routerBaseName = process.env.PUBLIC_URL;
 root.render(
   <BrowserRouter>
     <Switch>
-      <Route path="/components" render={(props) => <Index {...props} />} />
-      <Route
+      <Route basename={routerBaseName} path="/components" render={(props) => <Index {...props} />} />
+      <Route basename={routerBaseName}
         path="/landing-page"
         render={(props) => <LandingPage {...props} />}
       />
-      <Route
+      <Route basename={routerBaseName}
         path="/register-page"
         render={(props) => <RegisterPage {...props} />}
       />
-      <Route
+      <Route basename={routerBaseName}
         path="/contact-page"
         render={(props) => <ContactPage {...props} />}
       />
-      <Route
+      <Route basename={routerBaseName}
         path="/PlayerAccount"
         render={(props) => <PlayerAccount {...props} />}
       />
-      <Route
+      <Route basename={routerBaseName}
         path="/Exchange"
         render={(props) => <Exchange {...props} />}
       />
-      <Route
+      <Route basename={routerBaseName}
       path="/Casino"
       render={(props) => <Casino {...props} />}
     />
-    <Route
+    <Route basename={routerBaseName}
       path="/SportsBook"
       render={(props) => <SportsBook {...props} />}
     />
-    <Route
+    <Route basename={routerBaseName}
         path="/B2BSupport"
         render={(props) => <BBSupport {...props} />}
       />
-      <Route
+      <Route basename={routerBaseName}
         path="/Desktop"
         render={(props) => <Desktop {...props} />}
       />
-      <Route
+      <Route basename={routerBaseName}
       path="/Mobile"
       render={(props) => <Mobile {...props} />}
     />
-    <Route
+    <Route basename={routerBaseName}
       path="/Turnkey"
       render={(props) => <Turnkey {...props} />}
     />
@@ -81,30 +81,30 @@ root.render(
         path="/Management"
         render={(props) => <Management {...props} />}
       />
-      <Route
+      <Route basename={routerBaseName}
         path="/AboutUs"
         render={(props) => <AboutUs {...props} />}
       />
-      <Route
+      <Route basename={routerBaseName}
         path="/License"
         render={(props) => <License {...props} />}
       />
-      <Route
+      <Route basename={routerBaseName}
         path="/Partners"
         render={(props) => <Partners {...props} />}
       />
-      <Route
+      <Route basename={routerBaseName}
         path="/Events"
         render={(props) => <Events {...props} />}
       />
-      <Route
+      <Route basename={routerBaseName}
         path="/News"
         render={(props) => <News {...props} />}
-      /><Route
+      /><Route basename={routerBaseName}
       path="/Blogs"
       render={(props) => <Blogs {...props} />}
     />
-      <Redirect from="/" to="/components" />
+      <Redirect basename={routerBaseName} from="/" to="/components" />
     </Switch>
   </BrowserRouter>
 );
