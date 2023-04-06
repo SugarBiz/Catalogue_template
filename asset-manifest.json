@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Catalogue_template/static/css/main.07c1c761.css",
-    "main.js": "/Catalogue_template/static/js/main.dc46aa2b.js",
+    "main.js": "/Catalogue_template/static/js/main.e55482bd.js",
     "static/media/License1.png": "/Catalogue_template/static/media/License1.5586b3f62ac9af555c71.png",
     "static/media/square-purple-1.png": "/Catalogue_template/static/media/square-purple-1.ed3a5e3801e35e68ab23.png",
     "static/media/casino-baccarat-dealer.jpeg": "/Catalogue_template/static/media/casino-baccarat-dealer.b5fb0f8fdd3c52e31b28.jpeg",
@@ -52,6 +52,6 @@
   },
   "entrypoints": [
     "static/css/main.07c1c761.css",
-    "static/js/main.dc46aa2b.js"
+    "static/js/main.e55482bd.js"
   ]
 }
