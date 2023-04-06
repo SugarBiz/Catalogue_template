@@ -29,6 +29,7 @@ import Blogs from "views/examples/Services/Blogs"
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 const routerBaseName = process.env.PUBLIC_URL;
+console.log(routerBaseName, "routerBaseName")
 root.render(
   <BrowserRouter>
     <Switch>
